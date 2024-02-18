@@ -1,0 +1,55 @@
+import React, { useState } from 'react'
+import './Editable.css'
+
+const Editable = (props) => {
+    const [show, setShow] = useState(props?.handler || false)
+    const [text, setText] = useState('')
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault()
+        if (text && props.onSubmit) {
+            setText('')
+            props.onSubmit(text)
+        }
+        setShow(false)
+    }
+
+    return (
+        <div className={`editable ${props.parentClass}`}>
+            {show ? (
+                <form onSubmit={handleOnSubmit}>
+                    <div className={`editable-input ${props.class}`}>
+                        <textarea
+                            placeholder={props.placeholder}
+                            autoFocus
+                            id={'edit-input'}
+                            type={'text'}
+                            onChange={(e) => setText(e.target.value)}
+                        />
+                        <div className="btn-add-task-container">
+                            <button className="btn-add" type="submit">
+                                {`${props.btnName}` || 'Add'}
+                            </button>
+                            <button
+                                className="btn-close"
+                                onClick={() => setShow(false)}
+                            >
+                                X
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            ) : (
+                <p
+                    onClick={() => {
+                        setShow(true)
+                    }}
+                >
+                    {props.name}
+                </p>
+            )}
+        </div>
+    )
+}
+
+export default Editable

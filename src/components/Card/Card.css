@@ -1,0 +1,22 @@
+.card {
+    background-color: var(--card-color);
+    border-radius: 3px;
+    margin-inline: auto;
+    padding-inline: 0.5rem;
+    padding-bottom: 0.4rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.card-tags {
+    display: flex;
+    column-gap: 5px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

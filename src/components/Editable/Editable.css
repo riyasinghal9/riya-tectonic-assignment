@@ -1,0 +1,66 @@
+.editable {
+    height: auto;
+}
+.editable > p {
+    width: 90%;
+    display: flex;
+    gap: 5px;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: ease-in-out 200ms;
+    margin-inline: auto;
+}
+.editable > p:hover {
+    background-color: #fafbfc;
+    color: #000;
+    cursor: pointer;
+}
+.editable-input {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0.5rem;
+    gap: 10px;
+}
+.editable-input > textarea {
+    width: 98%;
+    -webkit-appearance: none;
+    background-color: #fafbfc;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 2px #dfe1e6;
+    box-sizing: border-box;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 12px;
+    outline: none;
+    padding: 8px 12px;
+    transition-duration: 85ms;
+    transition-property: background-color, border-color, box-shadow;
+    transition-timing-function: ease;
+}
+.editable-input > textarea:focus {
+    border: none;
+    outline: none;
+}
+.btn-add-task-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.btn-add {
+    background-color: #2e7ba8;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 4px;
+}
+
+.btn-close {
+    background-color: #af2d0d;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 4px;
+}
+
+.btn-close:hover {
+    cursor: pointer;
+}

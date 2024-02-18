@@ -1,0 +1,41 @@
+.red {
+  color: red;
+}
+
+.add-tag {
+  width: 100px;
+  border: none;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.card-details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.label-input-container {
+  margin-bottom: 10px;
+}
+
+label {
+  max-width: 200px;
+  min-width: 200px;
+  display: inline-block;
+}
+
+.tag-container {
+  margin: 5px;
+  display: inline;
+}
+
+.tag-delete {
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.tag {
+  color: #FFF;
+  padding: 5px;
+}
